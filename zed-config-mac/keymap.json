@@ -1,0 +1,80 @@
+[
+  {
+    "context": "vim_mode == insert",
+    "bindings": {
+      "j k": "vim::NormalBefore",
+      "j j": "vim::NormalBefore"
+    }
+  },
+  {
+    "context": "VimControl && !menu && vim_mode != operator",
+    "bindings": {
+      "w": "vim::NextSubwordStart",
+      "b": "vim::PreviousSubwordStart",
+      "e": "vim::NextSubwordEnd",
+      "g e": "vim::PreviousSubwordEnd"
+    }
+  },
+  {
+    "context": "vim_mode == visual",
+    "bindings": {
+      "shift-s": ["vim::PushAddSurrounds", {}]
+    }
+  },
+  {
+    "context": "vim_mode == normal && !menu",
+    "bindings": {
+      "shift-y": ["workspace::SendKeystrokes", "y $"],
+      "cmd-x": "project_symbols::Toggle",
+      "cmd-z": "workspace::ToggleBottomDock"
+    }
+  },
+  {
+    "context": "VimControl || menu",
+    "bindings": {
+      "cmd-h": "workspace::ActivatePaneLeft",
+      "cmd-l": "workspace::ActivatePaneRight",
+      "cmd-j": "pane::ActivatePreviousItem",
+      "cmd-k": "pane::ActivateNextItem",
+      "cmd-o": "pane::GoBack",
+      "cmd-i": "pane::GoForward"
+    }
+  },
+  {
+    "context": "vim_mode == insert && !(showing_code_actions || showing_completions)",
+    "bindings": {
+      "cmd-space": "editor::ShowCompletions"
+    }
+  },
+  {
+    "context": "Editor && !menu",
+    "bindings": {
+      // "cmd-c": "editor::Copy", // vim default: return to normal mode
+      // "cmd-x": "editor::Cut", // vim default: decrement
+      // "cmd-v": "editor::Paste", // vim default: visual block mode
+      // "cmd-y": "editor::Undo", // vim default: line up
+      "cmd-f": "buffer_search::Deploy" // vim default: page down
+      // "cmd-o": "workspace::Open", // vim default: go back
+      // "cmd-a": "editor::SelectAll" // vim default: increment
+    }
+  },
+  {
+    "context": "Editor && (showing_code_actions || showing_completions)",
+    "use_key_equivalents": true,
+    "bindings": {
+      "up": "editor::ContextMenuPrevious",
+      "cmd-p": "editor::ContextMenuPrevious",
+      "down": "editor::ContextMenuNext",
+      "cmd-n": "editor::ContextMenuNext",
+      "pageup": "editor::ContextMenuFirst",
+      "pagedown": "editor::ContextMenuLast"
+    }
+  },
+  {
+    "context": "FileFinder",
+    "bindings": {
+      "cmd-p": "menu::SelectPrevious",
+      "cmd-n": "menu::SelectNext"
+    }
+  }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "context": "vim_mode == insert",
+    "bindings": {
+      "j k": "vim::NormalBefore",
+      "j j": "vim::NormalBefore"
+    }
+  },
+  {
+    "context": "VimControl && !menu && vim_mode != operator",
+    "bindings": {
+      "w": "vim::NextSubwordStart",
+      "b": "vim::PreviousSubwordStart",
+      "e": "vim::NextSubwordEnd",
+      "g e": "vim::PreviousSubwordEnd"
+    }
+  },
+  {
+    "context": "vim_mode == visual",
+    "bindings": {
+      "shift-s": ["vim::PushAddSurrounds", {}]
+    }
+  },
+  {
+    "context": "vim_mode == normal && !menu",
+    "bindings": {
+      "shift-y": ["workspace::SendKeystrokes", "y $"],
+      "ctrl-c": "project_symbols::Toggle"
+    }
+  },
+  {
+    "context": "VimControl || menu",
+    "bindings": {
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-j": "pane::ActivatePreviousItem",
+      "ctrl-k": "pane::ActivateNextItem"
+    }
+  },
+  {
+    "context": "Editor && !menu",
+    "bindings": {
+      // "ctrl-c": "editor::Copy", // vim default: return to normal mode
+      // "ctrl-x": "editor::Cut", // vim default: decrement
+      // "ctrl-v": "editor::Paste", // vim default: visual block mode
+      // "ctrl-y": "editor::Undo", // vim default: line up
+      "ctrl-f": "buffer_search::Deploy" // vim default: page down
+      // "ctrl-o": "workspace::Open", // vim default: go back
+      // "ctrl-a": "editor::SelectAll" // vim default: increment
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-t": "workspace::ToggleBottomDock"
+    }
+  }
+]
