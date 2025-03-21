@@ -2,8 +2,8 @@
   {
     "context": "vim_mode == insert",
     "bindings": {
-      "j k": "vim::NormalBefore",
-      "j j": "vim::NormalBefore"
+      "j j": "vim::NormalBefore",
+      "j k": "vim::NormalBefore"
     }
   },
   {
@@ -25,8 +25,7 @@
     "context": "vim_mode == normal && !menu",
     "bindings": {
       "shift-y": ["workspace::SendKeystrokes", "y $"],
-      "cmd-x": "project_symbols::Toggle",
-      "cmd-z": "workspace::ToggleBottomDock"
+      "cmd-x": "project_symbols::Toggle"
     }
   },
   {
@@ -53,7 +52,7 @@
       // "cmd-x": "editor::Cut", // vim default: decrement
       // "cmd-v": "editor::Paste", // vim default: visual block mode
       // "cmd-y": "editor::Undo", // vim default: line up
-      "cmd-f": "buffer_search::Deploy" // vim default: page down
+      // "cmd-f": "buffer_search::Deploy" // vim default: page down
       // "cmd-o": "workspace::Open", // vim default: go back
       // "cmd-a": "editor::SelectAll" // vim default: increment
     }
@@ -75,6 +74,31 @@
     "bindings": {
       "cmd-p": "menu::SelectPrevious",
       "cmd-n": "menu::SelectNext"
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "cmd-1": "pane::CloseAllItems"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-2": "workspace::ToggleBottomDock"
+    }
+  },
+  {
+    "context": "vim_mode == normal || vim_mode == visual",
+    "bindings": {
+      "s": "vim::PushSneak",
+      "shift-s": "vim::PushSneakBackward"
+    }
+  },
+  {
+    "context": "vim_mode == visual",
+    "bindings": {
+      "shift-x": "vim::Exchange"
     }
   }
 ]

@@ -21,12 +21,18 @@
   "telemetry": {
     "metrics": false
   },
+  "vim": {
+    "use_smartcase_find": true
+  },
   "vim_mode": true,
   "ui_font_size": 16,
+  "buffer_font_size": 13,
+  "buffer_font_family": "JetBrainsMonoNL Nerd Font Mono",
+  "buffer_line_height": "comfortable",
   "theme": {
     "mode": "system",
-    "light": "Catppuccin Macchiato",
-    "dark": "One Dark"
+    "light": "Ayu Light",
+    "dark": "Ayu Dark"
   },
   "relative_line_numbers": true,
   "cursor_blink": true,
