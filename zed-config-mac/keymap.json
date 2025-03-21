@@ -100,5 +100,11 @@
     "bindings": {
       "shift-x": "vim::Exchange"
     }
+  },
+  {
+    "bindings": {
+      "cmd-n": "menu::SelectNext",
+      "cmd-p": "menu::SelectPrevious"
+    }
   }
 ]

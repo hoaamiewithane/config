@@ -9,7 +9,7 @@
 {
   "icon_theme": "Colored Zed Icons Theme Dark",
   "features": {
-    "edit_prediction_provider": "none"
+    "edit_prediction_provider": "zed"
   },
   "assistant": {
     "default_model": {
@@ -21,8 +21,17 @@
   "telemetry": {
     "metrics": false
   },
+  "show_completions_on_input": true,
   "vim": {
-    "use_smartcase_find": true
+    "use_smartcase_find": true,
+    "toggle_relative_line_numbers": true
+  },
+  "languages": {
+    "TypeScript": {
+      "code_actions_on_format": {
+        "source.organizeImports": true
+      }
+    }
   },
   "vim_mode": true,
   "ui_font_size": 16,
@@ -34,7 +43,7 @@
     "light": "Ayu Light",
     "dark": "Ayu Dark"
   },
-  "relative_line_numbers": true,
+  "relative_line_numbers": false,
   "cursor_blink": true,
   "scrollbar": { "show": "never" },
   "vertical_scroll_margin": 0,
